@@ -1,0 +1,385 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#"
+     xml:base="http://www.semanticweb.org/ine5633/ontologies/KRR/F1"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#assiste -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#assiste"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#dirige -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#dirige"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#orienta -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#orienta"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#participam -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#participam"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#possui -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#possui"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#trabalha -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#trabalha"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#tamanhoTotal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#tamanhoTotal">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Voltas"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Carro -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Carro"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarroCorrida -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarroCorrida">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Carro"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarroMedico -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarroMedico">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Carro"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarroSeguranca -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarroSeguranca">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Carro"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Corrida -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Corrida"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Equipe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Equipe"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Espectador -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Espectador">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Pessoa"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#assiste"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Corrida"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Pessoa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Grande -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Grande">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#participam"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">7</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Espectador"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#participam"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">10</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Espectador"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Plateia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Mecanico -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Mecanico">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Pessoa"/>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#orienta"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Piloto"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#trabalha"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarroCorrida"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Equipe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Media -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Media">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#participam"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">4</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Espectador"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#participam"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">6</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Espectador"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Plateia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Medico -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Medico">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#dirige"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarroMedico"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Pessoa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Pequena -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Pequena">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#participam"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Espectador"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#participam"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Espectador"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Plateia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Pessoa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Pessoa"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Piloto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Piloto">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#dirige"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarroCorrida"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Equipe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Plateia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Plateia"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Seguranca -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Seguranca">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#dirige"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarroSeguranca"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Pessoa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Voltas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Voltas"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Ferrari -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Ferrari">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Carro"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#GranPix -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#GranPix">
+        <participam rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Sadi"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Mercedez -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Mercedez">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Carro"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Sadi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Sadi">
+        <dirige rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Ferrari"/>
+        <dirige rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Mercedez"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Audi? -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Audi?">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Carro"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Ferrari"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Mercedez"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Ferrari"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Audi?"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
