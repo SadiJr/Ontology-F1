@@ -37,26 +37,36 @@
     
 
 
+    <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#atrasa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#atrasa">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#PilotoSeguranca"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Corrida"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#auxilia -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#auxilia">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#auxiliado_por"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Mecanico"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Piloto"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#auxiliado_por -->
+    <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#cura -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#auxiliado_por"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#cura">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Medico"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Piloto"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#dirige -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#dirige">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#dirigido_por"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Carro"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Piloto"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#PilotoMedico"/>
@@ -65,25 +75,12 @@
     
 
 
-    <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#dirigido_por -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#dirigido_por"/>
-    
-
-
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#orienta -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#orienta">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#orientado_por"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Engenheiro"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Piloto"/>
     </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#orientado_por -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#orientado_por"/>
     
 
 
@@ -111,6 +108,15 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#possui">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#trabalha"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#socorre -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#socorre">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#PilotoMedico"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Piloto"/>
     </owl:ObjectProperty>
     
 
@@ -151,20 +157,19 @@
 
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Carro -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Carro"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Carro">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Pessoa"/>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarroCorrida -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarroCorrida">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#dirigido_por"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Piloto"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Carro"/>
     </owl:Class>
     
@@ -173,13 +178,6 @@
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarroMedico -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarroMedico">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#dirigido_por"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#PilotoMedico"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#possui"/>
@@ -195,13 +193,6 @@
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarroSeguranca -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarroSeguranca">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#dirigido_por"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#PilotoSeguranca"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Carro"/>
     </owl:Class>
     
@@ -266,6 +257,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Equipe"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Pessoa"/>
     </owl:Class>
     
 
@@ -335,6 +327,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Equipe"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Pessoa"/>
     </owl:Class>
     
 
@@ -343,11 +336,19 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Medico">
         <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#trabalha"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarroMedico"/>
-            </owl:Restriction>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#cura"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Piloto"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#trabalha"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarroMedico"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Pessoa"/>
     </owl:Class>
@@ -385,6 +386,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Equipe"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Pessoa"/>
     </owl:Class>
     
 
@@ -393,11 +395,19 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#PilotoMedico">
         <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#dirige"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarroMedico"/>
-            </owl:Restriction>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#socorre"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Piloto"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#dirige"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarroMedico"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Pessoa"/>
     </owl:Class>
@@ -408,11 +418,19 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#PilotoSeguranca">
         <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#dirige"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarroSeguranca"/>
-            </owl:Restriction>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#atrasa"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Corrida"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#dirige"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarroSeguranca"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Pessoa"/>
     </owl:Class>
@@ -483,6 +501,7 @@
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#AlanVanDerMerwe -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#AlanVanDerMerwe">
+        <atrasa rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#GP_Brasil"/>
         <dirige rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#MC"/>
     </owl:NamedIndividual>
     
@@ -534,6 +553,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#BerndMaylander">
         <dirige rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#SC"/>
+        <socorre rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarlosSainz"/>
     </owl:NamedIndividual>
     
 
@@ -1074,9 +1094,7 @@
 
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#MC -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#MC">
-        <possui rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#IanRoberts"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#MC"/>
     
 
 
@@ -1372,7 +1390,9 @@
 
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#SC -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#SC"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#SC">
+        <possui rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#IanRoberts"/>
+    </owl:NamedIndividual>
     
 
 
@@ -1481,6 +1501,14 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Piloto"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#PilotoMedico"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#PilotoSeguranca"/>
+        </owl:members>
+    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
