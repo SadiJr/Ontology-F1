@@ -55,6 +55,21 @@
     
 
 
+    <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#composta -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#composta">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Temporada"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Corrida"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#contem -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#contem"/>
+    
+
+
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#cura -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#cura">
@@ -94,8 +109,6 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#participam">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Corrida"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Temporada"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Corrida"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Equipe"/>
     </owl:ObjectProperty>
     
@@ -215,7 +228,7 @@
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#participam"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#contem"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">10</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Equipe"/>
             </owl:Restriction>
@@ -363,9 +376,7 @@
 
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Pais -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Pais">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Corrida"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Pais"/>
     
 
 
@@ -448,7 +459,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Temporada">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#participam"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#composta"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Corrida"/>
             </owl:Restriction>
@@ -1027,7 +1038,9 @@
 
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#IanRoberts -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#IanRoberts"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#IanRoberts">
+        <cura rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#FernandoAlonso"/>
+    </owl:NamedIndividual>
     
 
 
@@ -1399,11 +1412,11 @@
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Temporada2021 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Temporada2021">
-        <participam rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#GP_Brasil"/>
-        <participam rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#GP_EmiliaRomanha"/>
-        <participam rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#GP_Italia"/>
-        <participam rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#GP_Monaco"/>
-        <participam rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#GP_PaisesBaixos"/>
+        <composta rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#GP_Brasil"/>
+        <composta rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#GP_EmiliaRomanha"/>
+        <composta rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#GP_Italia"/>
+        <composta rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#GP_Monaco"/>
+        <composta rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#GP_PaisesBaixos"/>
     </owl:NamedIndividual>
     
 
@@ -1464,6 +1477,14 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarroCorrida"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarroMedico"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarroSeguranca"/>
+        </owl:members>
+    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
