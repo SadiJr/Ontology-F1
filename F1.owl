@@ -86,6 +86,7 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Piloto"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#PilotoMedico"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#PilotoSeguranca"/>
                 </owl:unionOf>
@@ -94,6 +95,7 @@
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarroCorrida"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarroMedico"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarroSeguranca"/>
                 </owl:unionOf>
@@ -396,7 +398,7 @@
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#pilota"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#dirige"/>
                         <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarroCorrida"/>
                     </owl:Restriction>
                     <owl:Restriction>
@@ -550,7 +552,7 @@
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#AntonioGiovinazzi -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#AntonioGiovinazzi">
-        <pilota rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#C41_2"/>
+        <dirige rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#C41_2"/>
         <trabalha rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#AlfaRomeo"/>
     </owl:NamedIndividual>
     
@@ -592,8 +594,8 @@
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarlosSainz -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarlosSainz">
+        <dirige rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Ferrari"/>
         <pilota rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#SF21_2"/>
-        <trabalha rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Ferrari"/>
     </owl:NamedIndividual>
     
 
@@ -601,7 +603,7 @@
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CharlesLeclerc -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CharlesLeclerc">
-        <pilota rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#SF21_1"/>
+        <dirige rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#SF21_1"/>
         <trabalha rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Ferrari"/>
     </owl:NamedIndividual>
     
@@ -610,7 +612,7 @@
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#DanielRiccardo -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#DanielRiccardo">
-        <pilota rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#MCL35M_2"/>
+        <dirige rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#MCL35M_2"/>
         <trabalha rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#McLaren"/>
     </owl:NamedIndividual>
     
@@ -893,7 +895,7 @@
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#EstebanOcon -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#EstebanOcon">
-        <pilota rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#A521_2"/>
+        <dirige rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#A521_2"/>
         <trabalha rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Alpine"/>
     </owl:NamedIndividual>
     
@@ -914,7 +916,7 @@
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#FernandoAlonso -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#FernandoAlonso">
-        <pilota rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#A521_1"/>
+        <dirige rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#A521_1"/>
         <trabalha rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Alpine"/>
     </owl:NamedIndividual>
     
@@ -1029,7 +1031,7 @@
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#GeorgeRussell -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#GeorgeRussell">
-        <pilota rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#FW43B_1"/>
+        <dirige rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#FW43B_1"/>
         <trabalha rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Willians"/>
     </owl:NamedIndividual>
     
@@ -1058,7 +1060,7 @@
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#KimiRaikkonen -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#KimiRaikkonen">
-        <pilota rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#C41_1"/>
+        <dirige rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#C41_1"/>
         <trabalha rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#AlfaRomeo"/>
     </owl:NamedIndividual>
     
@@ -1067,7 +1069,7 @@
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#LanceStroll -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#LanceStroll">
-        <pilota rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#AMR21_1"/>
+        <dirige rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#AMR21_1"/>
         <trabalha rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#AstonMartin"/>
     </owl:NamedIndividual>
     
@@ -1076,7 +1078,7 @@
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#LandoNorris -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#LandoNorris">
-        <pilota rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#MCL35M_1"/>
+        <dirige rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#MCL35M_1"/>
         <trabalha rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#McLaren"/>
     </owl:NamedIndividual>
     
@@ -1085,7 +1087,7 @@
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#LewisHamilton -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#LewisHamilton">
-        <pilota rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#W12_1"/>
+        <dirige rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#W12_1"/>
         <trabalha rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Mercedes"/>
     </owl:NamedIndividual>
     
@@ -1292,7 +1294,7 @@
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#MaxVerstappen -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#MaxVerstappen">
-        <pilota rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#RB16B_1"/>
+        <dirige rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#RB16B_1"/>
         <trabalha rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Redbull"/>
     </owl:NamedIndividual>
     
@@ -1313,7 +1315,7 @@
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#MickSchumacher -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#MickSchumacher">
-        <pilota rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#VF21_1"/>
+        <dirige rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#VF21_1"/>
         <trabalha rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Haas"/>
     </owl:NamedIndividual>
     
@@ -1328,7 +1330,7 @@
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#NicholasLatifi -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#NicholasLatifi">
-        <pilota rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#FW43B_2"/>
+        <dirige rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#FW43B_2"/>
         <trabalha rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Willians"/>
     </owl:NamedIndividual>
     
@@ -1337,7 +1339,7 @@
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#NikitaMazepin -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#NikitaMazepin">
-        <pilota rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#VF21_2"/>
+        <dirige rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#VF21_2"/>
         <trabalha rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Haas"/>
     </owl:NamedIndividual>
     
@@ -1352,7 +1354,7 @@
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#PierreGasly -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#PierreGasly">
-        <pilota rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#AT02_1"/>
+        <dirige rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#AT02_1"/>
         <trabalha rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#AlphaTauri"/>
     </owl:NamedIndividual>
     
@@ -1399,7 +1401,7 @@
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#SebastianVettel -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#SebastianVettel">
-        <pilota rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#AMR21_2"/>
+        <dirige rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#AMR21_2"/>
         <trabalha rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#AstonMartin"/>
     </owl:NamedIndividual>
     
@@ -1408,7 +1410,7 @@
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#SergioPerez -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#SergioPerez">
-        <pilota rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#RB16B_2"/>
+        <dirige rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#RB16B_2"/>
         <trabalha rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Redbull"/>
     </owl:NamedIndividual>
     
@@ -1441,7 +1443,7 @@
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#ValtteriBottas -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#ValtteriBottas">
-        <pilota rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#W12_2"/>
+        <dirige rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#W12_2"/>
         <trabalha rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Mercedes"/>
     </owl:NamedIndividual>
     
@@ -1468,7 +1470,7 @@
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#YukiTsunoda -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#YukiTsunoda">
-        <pilota rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#AT02_2"/>
+        <dirige rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#AT02_2"/>
         <trabalha rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#AlphaTauri"/>
     </owl:NamedIndividual>
     
