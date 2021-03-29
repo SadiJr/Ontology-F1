@@ -132,15 +132,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#pilota -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#pilota">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Piloto"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarroCorrida"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#possui -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#possui">
@@ -595,7 +586,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarlosSainz">
         <dirige rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Ferrari"/>
-        <pilota rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#SF21_2"/>
+        <dirige rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#SF21_2"/>
     </owl:NamedIndividual>
     
 
