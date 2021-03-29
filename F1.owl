@@ -261,18 +261,20 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Engenheiro">
         <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#orienta"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Piloto"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#trabalha"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Equipe"/>
-            </owl:Restriction>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#orienta"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Piloto"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#trabalha"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Equipe"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Equipe"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Pessoa"/>
@@ -331,18 +333,20 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Mecanico">
         <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#auxilia"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Piloto"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#trabalha"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Equipe"/>
-            </owl:Restriction>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#auxilia"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Piloto"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#trabalha"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Equipe"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Equipe"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Pessoa"/>
@@ -389,17 +393,19 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Piloto">
         <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#pilota"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarroCorrida"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#trabalha"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Equipe"/>
-            </owl:Restriction>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#pilota"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarroCorrida"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#trabalha"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Equipe"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Equipe"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Pessoa"/>
