@@ -169,11 +169,11 @@
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Carro -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Carro">
-        <owl:equivalentClass>
+        <rdfs:subClassOf>
             <owl:Class>
                 <owl:complementOf rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Pessoa"/>
             </owl:Class>
-        </owl:equivalentClass>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
