@@ -585,8 +585,8 @@
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarlosSainz -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarlosSainz">
-        <dirige rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Ferrari"/>
         <dirige rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#SF21_2"/>
+        <trabalha rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Ferrari"/>
     </owl:NamedIndividual>
     
 
