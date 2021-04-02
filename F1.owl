@@ -215,8 +215,7 @@
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#participam"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">10</owl:qualifiedCardinality>
-                        <owl:onClass rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Equipe"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#Equipe"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#pertence"/>
@@ -504,8 +503,8 @@
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#AlanVanDerMerwe -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#AlanVanDerMerwe">
-        <atrasa rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#GP_Brasil"/>
         <dirige rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#MC"/>
+        <socorre rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#FernandoAlonso"/>
     </owl:NamedIndividual>
     
 
@@ -546,8 +545,8 @@
     <!-- http://www.semanticweb.org/ine5633/ontologies/KRR/F1#BerndMaylander -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#BerndMaylander">
+        <atrasa rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#GP_Brasil"/>
         <dirige rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#SC"/>
-        <socorre rdf:resource="http://www.semanticweb.org/ine5633/ontologies/KRR/F1#CarlosSainz"/>
     </owl:NamedIndividual>
     
 
